@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="description" content="construction html5 template">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+<!-- Fonts
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="{{ url_for('static', filename = 'css/external.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Celia | Multi-purpose Business Html5 Template</title>
+</head>
+<body>
+    <div class="preloader">
+	<div class="spinner">
+	<div class="double-bounce1"></div>
+	<div class="double-bounce2"></div>
+	</div>
+</div><!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header header-1">
+    <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid container-p0">
+            <a class="navbar-brand" href="index.html">
+                <img src="{{ url_for('static', filename = 'images/logo/Abhaya Logo.png') }}" alt="celia template">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                     	<!-- Home Menu -->
+						<li class="has-dropdown mega-dropdown ">
+							<a href="{{ url_for('home') }}"  class="dropdown-toggle menu-item">home</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown ">
+							<a href="{{ url_for('howwecanhelp') }}"  class="dropdown-toggle menu-item">how we can help</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown ">
+							<a href="{{ url_for('watch') }}"  class="dropdown-toggle menu-item">Watch Stories</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown active">
+							<a href="{{ url_for('campaings') }}"  class="dropdown-toggle menu-item">Campaing</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown ">
+							<a href="{{ url_for('donation') }}"  class="dropdown-toggle menu-item">donation</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown ">
+							<a href="{{ url_for('login') }}"  class="dropdown-toggle menu-item">join us</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+
+	
+	
+ 
+                </ul>
+                <div class="module-container">
+                    <!-- Module Languages -->
+<div class="module module-lang">
+    <a href="#">EN</a>|<a href="#">AR</a>
+</div>                    <!-- Module Social -->
+<div class="module module-social">
+    <a class="social-icon social-text-hover social-icon-twitter" href="#"><i class="fa fa-twitter"></i></a>
+    <a class="social-icon social-text-hover social-icon-instagram" href="#"><i class="fa fa-instagram"></i></a>
+</div>                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+<!-- Page Title #1
+============================================= -->
+<section id="page-title" class="page-title">
+    <div class="container-fluid bg-overlay">
+        <div class="bg-section">
+            <img src="{{ url_for('static', filename = 'images/page-title/title-6.jpg') }}" alt="Background" />
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="title title-1">
+                    <div class="title-content">
+                        <div class="title-heading">
+                            <h1>Community OutReach</h1>
+                        </div>
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Campaigns</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li class="active">Posts</li>
+                        </ol>
+                    </div>
+                </div><!-- .page-title end -->
+            </div><!--  .col-lg-12 end -->
+        </div><!-- .row end -->
+    </div><!-- .container end -->
+</section><!-- #page-title end -->
+
+<!-- Blog Standard Fullwidth
+============================================= -->
+<section id="blog-standard-fullwidth" class="blog blog-standard">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <div class="row mb-25">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="entry">
+                            <div class="entry-featured">
+                                <img src="{{ url_for('static', filename = 'images/blog/standard/1col/5.jpg') }}" alt="entry title">
+                            </div>
+                            <!-- .entry-featured end -->
+                            <div class="entry-date text-center">
+                                <a href="#">Nov 29, 2019</a>
+                            </div>
+                            <div class="entry-title text-center">
+                                <h3>
+                                    <a href="#">AngelXpress Foundation</a>
+                                </h3>
+                            </div>
+                            <!-- .entry-title end -->
+                            <div class="entry-meta text-center">
+                                <span>By : </span>
+                                <a href="#">Yesh</a>
+                                /
+                                <span>Comments : </span>
+                                <span>
+                                    <a href="#">27</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta end -->
+                            <div class="entry-content">
+                                <p>"These little munchkins were curiously looking at me, observing my every move.. their eyes moved as if glued on me and then then said in unison "HELLOOOO Miss, WELCOME To the AXF family!!! ".. that’s when I realized... i am going to be magically and unconditionally in love with them!<br>Starting out as just a beginner, I realized that teaching is definitely more than what meets the eye. It's about how well you can listen and understand a child through their eyes, it’s about teaching the way they learn instead of them learning the way we teach. Teaching is about how consistent you are with your own words and values, because they learn exactly what you impart to them.</p>
+
+                                <p>I still remember my first day as a Mental health Teacher. I asked them to follow 4 rules. The first being that they are supposed to communicate only in English even if they don’t know certain words all they had to do was try. The second rule being if they wanted to ask anything, they must raise their hands,the third being that on the days that they had my class, the last 20mins would be spent on playing any game they liked.And the fourth being to share their original thoughts regarding certain situations whether that is negative or positive.  
+During the course of my first 2 weeks, my students started getting accustomed to my rules except a certain bunch of kids who I remember were very active in the beginning but suddenly began keeping to themselves. 
+They would never be part of group activities nor discussions unless coaxed . I pretty much figured out that it was because of obvious reasons... all my classes were in English, a language they weren't comfortable in. So one day I decided to let my class communicate in hindi or whichever language they felt comfortable to converse in. I deliberately translated every English spoken word in Hindi, I shared my persoanl stories, i began making deliberate mistakes,accept it and apologise for it.  I wanted them to feel just as normal as the others. 
+I wanted to make sure they knew that I was giving them attention because I wanted to and not because they struggled with English and sharing their thoughts. I made sure they participated more during Q&As and discussions held in class by talking about concepts that interested them. Soon everyone started attempted speaking words out loud or tried penning down words or sentences on paper.
+I kept this activity going on for about three weeks which was when I felt that they were now getting a bit more comfortable and confident with the language. That is when I decided to go back to my rules and even the children that would shy away began participating wholeheartedly. Most of my students that didn't even attempt words in English were now comfortable with whole sentences and could easily translate them back into Hindi as well. 
+I was elated to read essays they wrote about me in almost perfect English. It was when I was reading these essays that it struck me... there are no bad kids in the world, there are just impressionable, conflicted, young people wresting with emotions and impulses trying to communicate their feelings and needs the only way they know how! We as teachers or adults are supposed to look beyond that. 
+I call my students “my kids" because in our time together they aren’t just kids in my batch but they are an integral part of my life. Because years from now, it won't matter what my bank account was, the sort of house i lived in, or the kind of car I drove..but in the world I will have made a difference because I was important in the life of the kids that are our future. 
+Angel Xpress is an amazing journey I will always be a part of. Thank you.</p>
+                            </div><!-- .entry-content end -->
+
+                        </div>
+                        <!-- .entry end -->
+
+                        <!-- Post #2 -->
+                        <div class="entry">
+                            <div class="entry-featured">
+                                <img src="{{ url_for('static', filename = 'images/blog/standard/1col/5.jpg') }}" alt="entry title">
+                            </div>
+                            <!-- .entry-featured end -->
+                            <div class="entry-date text-center">
+                                <a href="#">Nov 27, 2018</a>
+                            </div>
+                            <div class="entry-title text-center">
+                                <h3>
+                                    <a href="#">In your corner- It Time to change</a>
+                                </h3>
+                            </div>
+                            <!-- .entry-title end -->
+                            <div class="entry-meta text-center">
+                                <span>By : </span>
+                                <a href="#">Snigdha</a>
+                                /
+                                <span>Comments : </span>
+                                <span>
+                                    <a href="#">20</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta end -->
+                            <div class="entry-content">
+                                <p> Time to Change is a charity that campaigns against mental health stigma. This year, it launched In Your Corner, a five-year campaign inspired by 12 months of research into men’s and young people’s attitudes towards mental health, including feedback from 18 focus groups across the country.</p>
+
+                                <p>This work spawned a number of insights into the barriers that prevent men in particular from opening up on the topic of mental health, chiefly that they are far less likely to report their own experiences of mental health issues or to discuss mental health problems with a professional.
+								<br><b>The Message</b>
+								<br>The new campaign urges men to recognize how their attitudes and behaviors can influence others’ experiences of mental health problems, and that being in a friend’s corner can make all the difference.The ‘In Your Corner’ campaign launched with a film featuring three heroic ‘corner men’ – ordinary guys who are seen to be actively supporting and listening to a mate when he needs them.The films are being promoted online and supported by poster advertising in pubs and gyms.
+								<br><b>Why it Worked</b> <br>The campaign taps into the insight that men are likely to avoid mental health as a topic of conversation, whether it concerns themselves or a friend, colleague or family member.By using a sporting analogy sprinkled with humour, the campaign overcomes the feeling of awkwardness, while serious elements ward against flippancy and useful content inspires people to share it with others.</p>
+                            </div><!-- .entry-content end -->
+
+                        </div>
+                        <!-- .entry end -->
+
+                        <!-- Post #3 -->
+                        <div class="entry">
+                            <div class="entry-featured">
+                                <img src="{{ url_for('static', filename = 'images/blog/standard/1col/5.jpg') }}" alt="entry title">
+                            </div>
+                            <!-- .entry-featured end -->
+                            <div class="entry-date text-center">
+                                <a href="#">Nov 24, 2019</a>
+                            </div>
+                            <div class="entry-title text-center">
+                                <h3>
+                                    <a href="#">Fun with the Abhaya fam</a>
+                                </h3>
+                            </div>
+                            <!-- .entry-title end -->
+                            <div class="entry-meta text-center">
+                                <span>By : </span>
+                                <a href="#">Varsha</a>
+                             
+                                <span>Comments : </span>
+                                <span>
+                                    <a href="#">27</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta end -->
+                            <div class="entry-content">
+                                <p>Our Abhaya community has grown from just 18 people to 1300 family members, the number of centers have increased to 13 and the amount of volunteers have also escalated beyond bounds. And all of this has only been possible because of the hard work and commitment of our teachers and volunteers</p>
+
+                                <p>Our teams across centers are celebrating teachers day in full gusto. We played games, danced, sang and made merry. Even our founders joined in the celebrations and gave a heartfelt speech thanking the teachers and volunteers for being a part of the Abhaya family and appreciating their love and dedication for the cause." We wanted all the teachers to realize the gratitude we feel towards them for helping us reach where we are. Thus, we distributed some gifts as a token of love, respect and appreciation. The volunteers were delighted with all the pampering will be an understatement.None of us would have been able to achieve our full potential, if it weren't for our teachers. They not only recognize but nurture our Abhaya kids. So we take this very special day to acknowledge and appreciate the presence of all our selfless, hardworking and caring teachers."</p>
+                            </div><!-- .entry-content end -->
+    
+                        </div>
+                        <!-- .entry end -->
+
+                        <!-- Post #4 -->
+                        <div class="entry">
+                            <div class="entry-featured">
+                                <img src="{{ url_for('static', filename = 'images/blog/standard/1col/5.jpg') }}" alt="entry title">
+                            </div>
+                            <!-- .entry-featured end -->
+                            <div class="entry-date text-center">
+                                <a href="#">April 23, 2019</a>
+                            </div>
+                            <div class="entry-title text-center">
+                                <h3>
+                                    <a href="#">Outreach Programs</a>
+                                </h3>
+                            </div>
+                            <!-- .entry-title end -->
+                            <div class="entry-meta text-center">
+                                <span>By : </span>
+                                <a href="#">Vaishnavi</a>
+                                /
+                                <span>Comments : </span>
+                                <span>
+                                    <a href="#">3</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta end -->
+                            <div class="entry-content">
+                                <p> This time of year is a busy one for The Kim Foundation! We were pleased to hold our School Resource Fair on September 19th at the Bellevue Lied Activity Center. The resource fair featured 38 organizations from around the community that presented to school staff about their behavioral health programs. The area school districts sent over 100 staff members to attend the fair.<br> The members were able to network with various organizations and listen to formal presentations by each organization.<br> It was a successful event and provided a unique learning experience for all involved!With the start of school came the start of presentations to many students and school staff throughout the city. Our presentations are catered to each school’s needs and can cover mental health, suicide prevention, or a combination of both. In September, we were able to provide suicide prevention presentations to the 7th & 8th grade students of Logan Fontenelle Middle School. We also presented to high school students at Ralston High School, Millard West High School, Bellevue West High School, and Westside High School covering mental health and suicide prevention. If your school is interested in a suicide prevention or mental health presentation, please contact us at 402-891-6911 or info@thekimfoundation.org to set up a date and time.</p>
+
+                                <p></p>
+                            </div><!-- .entry-content end -->
+   
+                        </div>
+                        <!-- .entry end -->
+
+                        <!-- Post #5 -->
+                        <div class="entry">
+                            <div class="entry-featured">
+                                <img src="{{ url_for('static', filename = 'images/blog/standard/1col/5.jpg') }}" alt="entry title">
+                            </div>
+                            <!-- .entry-featured end -->
+                            <div class="entry-date text-center">
+                                <a href="#">Nov 21, 2018</a>
+                            </div>
+                            <div class="entry-title text-center">
+                                <h3>
+                                    <a href="#">Make a difference with sports!!!</a>
+                                </h3>
+                            </div>
+                            <!-- .entry-title end -->
+                            <div class="entry-meta text-center">
+                                <span>By : </span>
+                                <a href="#">Dheeraj</a>
+                                /
+                                <span>Comments : </span>
+                                <span>
+                                    <a href="#">21</a>
+                                </span>
+                            </div>
+                            <!-- .entry-meta end -->
+                            <div class="entry-content">
+                                <p>It seems obvious that getting regular physical activity helps you stay physically fit. But you may be surprised to learn about the more subtle ways that staying active can also benefit your mental and emotional health.
+<br><b>When you get your body moving, you're able to also:</b>
+
+<br><b>Boost Your Mood</b>
+You’ll feel this effect immediately. When you’re physically active, your brain releases chemicals that make you feel happier and more relaxed. And when you participate in a team or group sport, you’ll also get the added benefit of positive social interaction.
+
+<br><b>Reduce Depression and Stress</b>
+When you’re immersed in a fun physical activity or team sport, you may find yourself totally distracted from the stressors and challenges of daily life. This temporary respite from stress can help you avoid getting bogged down by negative thoughts. What’s more, when you’re exercising, your body produces endorphins, which are a natural mood booster that can fight stress and depression. It’s endorphins that leave you feeling empowered, relaxed and optimistic after a good workout. 
+
+<br>The best news: This benefit impacts active people of all ages. Research has found that teens who participate in sports often have fewer feelings of depression and stress, as well as improved mental health.
+
+<br><b>Improve Your Sleep</b>
+Exercise can improve your quality of sleep by helping you fall asleep more quickly and deepening the quality of your sleep. In turn, sleeping better can improve your mood and mental function the following day.
+
+<br><b>Keep Your Mind Sharp</b>
+Sports can help improve your concentration and keep you mentally sharp as you age. Participating in a mix of aerobic and muscle-strengthening exercise for 30 minutes or longer at least three times a week can improve mental abilities, including critical thinking, learning and using good judgment.
+
+<br><b>Increase Your Self-Confidence</b>
+Scoring that goal in your soccer match can give you more than just a boost on the field. As you build your strength, skills and stamina through physical activity, this can also lead to improved self-image in all areas of your life.
+</p>
+
+                                <p></p>
+                            </div><!-- .entry-content end -->
+
+                        </div>
+                        <!-- .entry end -->
+                    </div><!-- .col-lg-12 end -->
+                </div><!-- .row end -->
+               
+            </div><!-- .col-lg-8 end -->
+
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #blog-standard-fullwidth end -->
+
+<!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer footer-8">
+            <div class="footer-container">
+                <!-- Info Widget
+	============================================= -->
+                <div class="footer-info-widget">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="contact-info">
+                                    <p>Email Us : AbhayaHelp@gmail.com</p>
+                                    <p>Call Us : 002 01065370701</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="copyright-info text-right">
+                                    <p>&copy; 2020 Abhaya. All Rights Reserved</p>
+                                    <p>With Love by <a href="">Abhaya.com</a></p>
+                                </div>
+                            </div>
+                        </div><!-- .row end -->
+                    </div><!-- .container end -->
+                </div><!-- .footer-copyright end -->
+
+            </div><!-- .footer-container end -->
+        </footer>
+ </div><!-- #wrapper end -->
+<script type="text/javascript">
+      /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+      (function(d, m){
+        var kommunicateSettings = {"appId":"ddb91221a6e187a9c39066f1637c2843","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+  </script>
+<!-- Footer Scripts
+============================================= -->
+<script src="{{ url_for('static', filename = 'js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/plugins.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/functions.js') }}"></script>
+</body>
+</html>

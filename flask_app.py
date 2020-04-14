@@ -1,15 +1,10 @@
 from flask import Flask, request, jsonify, render_template, url_for, redirect, session
-import os
-import dialogflow
-import requests
-import json
 import firebase_admin
 from firebase_admin import auth
 from firebase_admin import credentials
-from firebase_admin import storage
-# import pusher
-
+from datetime import date
 import pyrebase
+
 firebaseConfig = {
     'apiKey': "AIzaSyCVuv20kGMbMNcv87Sxu0702YpLXRbdxOM",
     'authDomain': "abhayafirebase.firebaseapp.com",
@@ -50,7 +45,8 @@ def makedonation():
          'name':name,
          'cardno':cardno,
          'date':date,
-         'cvv':cvv
+         'cvv':cvv,
+         'date':date.today()
       }
       try:
          results = db.child("donation").push(data)
@@ -62,18 +58,21 @@ def makedonation():
 def signup():
    return render_template('signup.html')
 
+@app.route('/watch')
+def watch():
+   return render_template('watch.html')
+
+@app.route('/campaings')
+def campaings():
+   return render_template('camps.html')
+
+@app.route('/howwecanhelp')
+def howwecanhelp():
+   return render_template('howwecanhelp.html')
+
 @app.route('/login')
 def login():
    return render_template('login.html')
-
-# @app.route('/dashboard')
-# def dashboard():
-#    if 'id' in session:
-#       return render_template('dashboard.html')
-#    else:
-#       return render_template('login.html')
-
-   
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -100,33 +99,11 @@ def makelogin():
          render_template('login.html')
    return render_template('dashboard.html')
 
-
 @app.route('/logout')
 def logout():
    if 'id' in session:  
         session.pop('id',None)  
    return render_template('index.html')
-
-# def detect_intent_texts(project_id, session_id, text, language_code):
-#     session_client = dialogflow.SessionsClient()
-#     session = session_client.session_path(project_id, session_id)
-
-#     if text:
-#         text_input = dialogflow.types.TextInput(
-#             text=text, language_code=language_code)
-#         query_input = dialogflow.types.QueryInput(text=text_input)
-#         response = session_client.detect_intent(
-#             session=session, query_input=query_input)
-#         return response.query_result.fulfillment_text
-
-# @app.route('/abhayabot')
-# def send_message():
-#     message = 'hey'
-#     project_id = 'abhaya-rlxqxj'
-#     fulfillment_text = detect_intent_texts(project_id, "unique", message, 'en')
-#     response_text = { "message":  fulfillment_text }
-#     print(response_text)
-#     return jsonify(response_text)
 
 
 if __name__ == '__main__':

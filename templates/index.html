@@ -13,7 +13,7 @@
 
 <!-- Fonts
     ============================================= -->
-<link href="http://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 
 <!-- RS5.0 Main Stylesheet -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'revolution/css/settings.css') }}">
@@ -49,7 +49,7 @@
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid container-p0">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo-white.png" alt="celia template">
+                <img src="{{ url_for('static', filename = 'images/logo/Abhaya Logo.png') }}" alt="celia template">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,15 +60,19 @@
                 <ul class="navbar-nav ml-auto">
                      	<!-- Home Menu -->
 						<li class="has-dropdown mega-dropdown active">
-							<a href="#"  class="dropdown-toggle menu-item">home</a>
+							<a href="{{ url_for('home') }}"  class="dropdown-toggle menu-item">home</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">how we can help</a>
+							<a href="{{ url_for('howwecanhelp') }}"  class="dropdown-toggle menu-item">how we can help</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">Our Story</a>
+							<a href="{{ url_for('watch') }}"  class="dropdown-toggle menu-item">Watch Stories</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown ">
+							<a href="{{ url_for('campaings') }}"  class="dropdown-toggle menu-item">Campaing</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
@@ -102,174 +106,70 @@
 <!-- Hero Section
 ====================================== -->
 <section id="slider" class="slider slider-3">
-	<!-- START REVOLUTION SLIDER 5.0 -->
-	<div class="rev_slider_wrapper">
-		<div id="slider1" class="rev_slider"  data-version="5.0">
-			<ul> 
-				<!-- slide 1 -->
-				<li data-transition="zoomin"
-					data-slotamount="default" 
-					data-easein="Power4.easeInOut" 
-					data-easeout="Power4.easeInOut" 
-					data-masterspeed="2000"
-					data-thumb="{{ url_for('static', filename = 'images/sliders/thumb/3.jpg') }}">
-					<!-- MAIN IMAGE -->
-					<img src="{{ url_for('static', filename = 'images/sliders/slide-bg/3.jpg') }}" alt="Slide Background Image"  width="1920" height="1280">
-					<!-- LAYER NR. 1 -->
-					<div class="tp-caption"
-				        data-x="['left','left','left','left']" data-hoffset="['-50','20','20','0']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" 
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="x:[-100%];s:3000;e:Power2.easeInOut;s:3000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1000" 				
-						data-responsive_offset="on">
-						<div class="slide-container"></div>
-					</div>
-					
-					<!-- LAYER NR. 2 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-65','-65','-65','-60']" 
-						data-fontsize="['65', '50', '40', '30']" 	
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1250" 					
-						data-responsive_offset="on">
-						<div class="slide--headline">Box Paint</div>
-					</div>
-					
-					<!-- LAYER NR. 3 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" 
-						data-fontsize="['17', '17', '15', '13']" 	
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1500" 					
-						data-responsive_offset="on">
-						<div class="slide--bio">Product is the vital essence of what we do, and truly great <br>product is born of meticulous planning and process. This is<br> where we specialise !</div>
-					</div>
-					
-					<!-- LAYER NR. 4 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['110','100','120','120']" 
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1750" 
-						data-responsive_offset="on" 
-						>
-						<div class="slide-action">
-							<a class="btn btn-secondary btn-hover btn-arrow" href="#"><i class="celia-arrow-long-right"></i></a>
-						</div>
-					</div>
-				</li>				
-				
-				<!-- slide 2 -->
-				<li data-transition="cube"
-					data-slotamount="default" 
-					data-easein="Power4.easeInOut" 
-					data-easeout="Power4.easeInOut" 
-					data-masterspeed="2000"
-					data-thumb="{{ url_for('static', filename = 'images/sliders/thumb/5.html') }}">
-					<!-- MAIN IMAGE -->
-					<img src="{{ url_for('static', filename = 'images/sliders/slide-bg/5.jpg') }}" alt="Slide Background Image"  width="1920" height="1280">
-					<!-- LAYER NR. 1 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['-50','20','20','0']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" 
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="x:[-100%];s:3000;e:Power2.easeInOut;s:3000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1000" 				
-						data-responsive_offset="on">
-						<div class="slide-container"></div>
-					</div>
-					
-					<!-- LAYER NR. 2 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-65','-65','-65','-60']" 
-						data-fontsize="['65', '50', '40', '30']" 	
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1250" 					
-						data-responsive_offset="on">
-						<div class="slide--headline">iKo Branding</div>
-					</div>
-					
-					<!-- LAYER NR. 3 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" 
-						data-fontsize="['17', '17', '15', '13']" 	
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1500" 						
-						data-responsive_offset="on">
-						<div class="slide--bio">Product is the vital essence of what we do, and truly great <br>product is born of meticulous planning and process. This is<br> where we specialise !</div>
-					</div>
-					
-					<!-- LAYER NR. 4 -->
-					<div class="tp-caption" 
-				        data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
-                        data-y="['middle','middle','middle','middle']" data-voffset="['110','100','120','120']" 
-						data-width="none"
-						data-height="none"
-                        data-transform_idle="o:1;"
-                        data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                        data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                        data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                        data-start="1750" 
-						data-responsive_offset="on" 
-						>
-						<div class="slide-action">
-							<a class="btn btn-secondary btn-hover btn-arrow" href="#"><i class="celia-arrow-long-right"></i></a>
-						</div>
-					</div>
-				</li>	
+            <!-- START REVOLUTION SLIDER 5.0 -->
+            <div class="rev_slider_wrapper">
+                <div id="slider1" class="rev_slider" data-version="5.0">
+                    <ul>
+                        <!-- slide 1 -->
+                        <li data-transition="zoomin" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="assets/images/sliders/thumb/3.jpg">
+                            <!-- MAIN IMAGE -->
+                            <img src="{{ url_for('static', filename = 'images/sliders/slide-bg/3.jpg') }}" alt="Slide Background Image" width="1920" height="1280">
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['-50','20','20','0']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="x:[-100%];s:3000;e:Power2.easeInOut;s:3000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
+                                <div class="slide-container"></div>
+                            </div>
 
-			</ul>
-		</div>
-		<!-- END REVOLUTION SLIDER -->
-	</div>
-	<!-- END OF SLIDER WRAPPER -->
-</section>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['-65','-65','-65','-60']" data-fontsize="['65', '50', '40', '30']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1250" data-responsive_offset="on">
+                                <div class="slide--headline">Hey! Take a deep breath...<br>We are here for you!</div>
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" data-fontsize="['17', '17', '15', '13']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-responsive_offset="on">
+                                <div class="slide--bio"><br>It sounds like you are experiencing a lot of distressing feelings and thoughts <br> Do remember that it will pass! </div>
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['110','100','120','120']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1750" data-responsive_offset="on">
+                                <div class="slide-action">
+                                    <a class="btn btn-secondary btn-hover btn-arrow" href="#"><i class="celia-arrow-long-right"></i></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- slide 2 -->
+                        <li data-transition="cube" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="assets/images/sliders/thumb/5.html">
+                            <!-- MAIN IMAGE -->
+                            <img src="{{ url_for('static', filename = 'images/sliders/slide-bg/5.jpg') }}" alt="Slide Background Image" width="1920" height="1280">
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['-50','20','20','0']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="x:[-100%];s:3000;e:Power2.easeInOut;s:3000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
+                                <div class="slide-container"> </div>
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['-65','-65','-65','-60']" data-fontsize="['65', '50', '40', '30']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1250" data-responsive_offset="on">
+                                <div class="slide--headline">Expand the Abhaya Fam <br>Come Join us!</div>
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','20','20']" data-fontsize="['17', '17', '15', '13']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-responsive_offset="on">
+                                <div class="slide--bio"><br>You can be anybody!<br>Share your story,help others or volunteer</div>
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption" data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['110','100','120','120']" data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1750" data-responsive_offset="on">
+                                <div class="slide-action">
+                                    <a class="btn btn-secondary btn-hover btn-arrow" href="{{ url_for('login') }}"><i class="celia-arrow-long-right"></i></a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- END REVOLUTION SLIDER -->
+            </div>
+            <!-- END OF SLIDER WRAPPER -->
+        </section>
 <!-- #hero end -->
  
   <!-- Service #3
@@ -286,7 +186,7 @@
 								<i class="icon icon-Bascketball"></i>
 							</div>
 							<div class="service-content">
-								<h3>Brand & Identity</h3>
+								<h3>Lonliness</h3>
 							</div>
 						</a>
 					</li>
@@ -296,7 +196,7 @@
 								<i class="icon icon-DesktopMonitor"></i>
 							</div>
 							<div class="service-content">
-								<h3>Web Design</h3>
+								<h3>Anxiety</h3>
 							</div>
 						</a>
 					</li>
@@ -306,7 +206,7 @@
 								<i class="icon icon-CompactCamera"></i>
 							</div>
 							<div class="service-content">
-								<h3>Photography</h3>
+								<h3>Depression</h3>
 							</div>
 						</a>
 					</li>
@@ -316,7 +216,7 @@
 								<i class="icon icon-Controller"></i>
 							</div>
 							<div class="service-content">
-								<h3>Graphic Design</h3>
+								<h3>Insomnia</h3>
 							</div>
 						</a>
 					</li>
@@ -326,7 +226,7 @@
 								<i class="icon icon-Web"></i>
 							</div>
 							<div class="service-content">
-								<h3>web Development</h3>
+								<h3>Anger</h3>
 							</div>
 						</a>
 					</li>
@@ -335,18 +235,18 @@
 					<div role="tabpanel" class="tab-pane fade show  active" id="Brand">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<div class="head">Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.</div>
+								<div class="head">Loneliness causes people to feel empty,unwanted and alone.<br>Are you feeling difficult to make connection with people?<br>Chat with our chatbot to get help from us.</div>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-								<p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
+								<p>Loneliness is a universal human emotion that is both complex and unique to each individual. Loneliness, according to many experts, is not necessarily about being alone. Instead, if you feel alone and isolated, then that is how loneliness plays into your state of mind. </p>
+								<p>Suffering from loneliness is somewhat like suffering from physical pain. Loneliness can heighten the fight-or-flight response—the physiological reaction a person has when facing a threat. </p>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Product is the vital essence of what we do, and truly great products are born of meticulous planning and process.</p>
-								This is where we specialise, taking a lean & agile approach to product creation.
-								<p>One of our values in Celia agency is “Beauty in Simplicity” because we love making things simple, intuitive and expertly crafted.</p>
+								<p>Loneliness can be a risk factor for heart disease, Type 2 diabetes, arthritis, among other critical diseases. </p>
+								
+								<p>Lonely people are also twice as likely to develop Alzheimer’s disease.Are you feeling difficult to make connection with people? Chat with our chatbot to get help from us.</p>
 							</div>
 							<!-- .col-lg-4 end -->
 						</div>
@@ -355,18 +255,18 @@
 					<div role="tabpanel" class="tab-pane fade" id="Web">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<div class="head">Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.</div>
+								<div class="head">Anxiety is a normal emotion. The American Psychological Association (APA) defines anxiety as “an emotion characterized by feelings of tension, worried thoughts and physical changes like increased blood pressure.” </div>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-								<p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
+								<p>Anxiety disorders affect 40 million people in the United States. It is the most common group of mental illnesses in the country. </p>
+								<p>But if you feel this often it might lead to disorders. Anxiety disorders form a category of mental health diagnoses that lead to excessive nervousness, fear, apprehension, and worry. </p>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Product is the vital essence of what we do, and truly great products are born of meticulous planning and process.</p>
-								This is where we specialise, taking a lean & agile approach to product creation.
-								<p>One of our values in Celia agency is “Beauty in Simplicity” because we love making things simple, intuitive and expertly crafted.</p>
+								<p>Know the difference between normal anxiety and anxiety that needs medical attention. It’s important to understand that anxiety disorders can be treated, even in severe cases. </p>
+								
+								<p>Although, anxiety usually doesn’t go away, you can learn to manage it and live a happy, healthy life. Find out more about Anxiety on our page.</p>
 							</div>
 							<!-- .col-lg-4 end -->
 						</div>
@@ -375,18 +275,18 @@
 					<div role="tabpanel" class="tab-pane fade" id="Photography">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<div class="head">Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.</div>
+								<div class="head">Depression is gradually becoming the most common mental illness in the world with the many number of people suffering from it, about 4% of the global population. </div>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-								<p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
+								<p>Depression leads to loss of interest in daily activities and extreme symptoms lead to self-harm and suicidal tendencies</p>
+								<p>Major depression is a treatable illness that affects the way a person thinks, feels, behaves, and functions . </p>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Product is the vital essence of what we do, and truly great products are born of meticulous planning and process.</p>
-								This is where we specialise, taking a lean & agile approach to product creation.
-								<p>One of our values in Celia agency is “Beauty in Simplicity” because we love making things simple, intuitive and expertly crafted.</p>
+								<p>The earlier that treatment can begin, the more effective it is. More than just about of the blues, depression isn't a weakness and you can't simply "snap out" of it. </p>
+								
+								<p>Depression may require long-term treatment.<br>Diagnose today and seeking help is OK!</p>
 							</div>
 							<!-- .col-lg-4 end -->
 						</div>
@@ -395,18 +295,18 @@
 					<div role="tabpanel" class="tab-pane fade" id="Design">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<div class="head">Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.</div>
+								<div class="head">Do you have difficulty to sleep? Are you awake in the middle of the night unable to get sufficient sleep? Then you’re at the right place. Talk to us and we can help you through it. </div>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-								<p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
+								<p>Insomnia is a sleep disorder in which you have trouble falling and/or staying asleep. The condition can be short-term (acute) or can last a long time (chronic).</p>
+								<p>It may also come and go. Acute insomnia lasts from 1 night to a few weeks. Insomnia is chronic when it happens at least 3 nights a week for 3 months or more. </p>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Product is the vital essence of what we do, and truly great products are born of meticulous planning and process.</p>
-								This is where we specialise, taking a lean & agile approach to product creation.
-								<p>One of our values in Celia agency is “Beauty in Simplicity” because we love making things simple, intuitive and expertly crafted.</p>
+								<p>What causes Insomnia ? Stress, Travel or work schedule, Poor sleep habits, Eating too much in the late evening, Over consumption of Caffeine, nicotine and alcohol. </p>
+								
+								<p>. Insomnia  risk factors include Long-term diseases or conditions like blood pressure and heart diseases, Mental health issues like depression , anxiety disorder etc. </p>
 							</div>
 							<!-- .col-lg-4 end -->
 						</div>
@@ -415,18 +315,18 @@
 					<div role="tabpanel" class="tab-pane fade" id="Development">
 						<div class="row">
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<div class="head">Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.</div>
+								<div class="head">Anger is a basic human emotion. But when it gets out of control and turns destructive, it can lead to problems—problems at work, in your personal relationships, and in the overall quality of your life. </div>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-								<p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
+								<p>And it can make you feel as though you're at the mercy of an unpredictable and powerful emotion</p>
+								<p> You need to know how to control it and when it turns to be a disorder. Prolonged release of the stress hormones that accompany anger can destroy neurons in areas of the brain associated with judgment and short-term memory, and weaken the immune system. </p>
 							</div>
 							<!-- .col-lg-4 end -->
 							<div class="col-sm-12 col-md-12 col-lg-4">
-								<p>Product is the vital essence of what we do, and truly great products are born of meticulous planning and process.</p>
-								This is where we specialise, taking a lean & agile approach to product creation.
-								<p>One of our values in Celia agency is “Beauty in Simplicity” because we love making things simple, intuitive and expertly crafted.</p>
+								<p>Letting anger issues go unaddressed can put your overall health at risk. </p>
+								
+								<p>Some physical symptoms of anger-related problems include Tingling, Heart palpitations or tightening of the chest, Increased blood pressure, Headaches, Pressure in the head or sinus cavities, Fatigue. You can always test yourself or talk to experts. Control the anger before it controls you.</p>
 							</div>
 							<!-- .col-lg-4 end -->
 						</div>
@@ -450,9 +350,9 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-12">
 						<div class="heading heading-4 mb-30">
-							<div class="subheading">A step-by-step guide to how we can help</div>
-							<h2>How Abhaya works!</h2>
-							<p>Hundreds of studies have shown that talking to someone is a powerful solution to problems like anxiety and depression. Making this a smart option for those who prefer online to in-office meetings.</p>
+							<div class="subheading">We Are Fearless</div>
+							<h2>We Are The Abhaya </h2>
+							<p>Established in 2020, ABHAYA is a nonprofit, community-based organization helping troubled individuals address their problems.</p>
 						</div>
 					</div>
 					<!-- .col-lg-12 end -->
@@ -462,11 +362,11 @@
 					<div class="col-sm-12 col-md-6 col-lg-6">
 						<div class="about-panel">
 							<div class="about-icon">
-								<h6>Identify</h6>
+								<h6></h6>
 							</div>
 							<div class="about-content">
-								<p>We'll help you identify the thoughts and behavior patterns that perpetuate your issues.</p>
-								<a href="#"><i class="celia-arrow-long-right"></i></a>
+								<p>Our organisation can only be as strong as our people and because of this, our team has persanal experiences in NGOs and mental health training.</p>
+								
 							</div>
 						</div>
 					</div>
@@ -476,11 +376,11 @@
 					<div class="col-sm-12 col-md-6 col-lg-6">
 						<div class="about-panel">
 							<div class="about-icon">
-								<h6>Learn</h6>
+								<h6>Mission</h6>
 							</div>
 							<div class="about-content">
-								<p>We'll help you recognize your fears and stressors.</p>
-								<a href="#"><i class="celia-arrow-long-right"></i></a>
+								<p>It is our mission to provide personal person-to-person education and support before problems become a crisis, using a personal reach out space, current technologies and community outreach.</p>
+								
 							</div>
 						</div>
 					</div>
@@ -490,11 +390,11 @@
 					<div class="col-sm-12 col-md-6 col-lg-6">
 						<div class="about-panel">
 							<div class="about-icon">
-								<h6>Practice</h6>
+								<h6>Values</h6>
 							</div>
 							<div class="about-content">
-								<p>The programs lessons will help you develop new healthy habits.</p>
-								<a href="#"><i class="celia-arrow-long-right"></i></a>
+								<p>One of our values in Abhaya is "Just Breath" because we love making things simple & intuitive.</p>
+								
 							</div>
 						</div>
 					</div>
@@ -504,11 +404,11 @@
 					<div class="col-sm-12 col-md-6 col-lg-6">
 						<div class="about-panel">
 							<div class="about-icon">
-								<h6>Live Well</h6>
+								<h6>Results</h6>
 							</div>
 							<div class="about-content">
-								<p>You will be able to manage your thoughts, actions, and attention in more situations..</p>
-								<a href="#"><i class="celia-arrow-long-right"></i></a>
+								<p>We thank each of our therapists and doctors that supported us; thanks to them we have grown and built .</p>
+								
 							</div>
 						</div>
 					</div>
@@ -555,44 +455,47 @@
 <!-- Portfolio Creative
 ============================================= -->
 <section id="about3" class="about about-1 about-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8">
-                <div class="about-heading">
-                    <div class="about-text">
-                        <div class="about-subheadline">
-                            We Care
-                        </div>
-                        <div class="about-headline">
-                            <h3>Our Story</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <div class="about-bio">
-                                Celia is a design studio founded in London in 2008 by Begha. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide.
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-8">
+                        <div class="about-heading">
+                            <div class="about-text">
+                                <div class="about-subheadline">
+                                    Learn about the founders
+                                </div>
+                                <div class="about-headline">
+                                    <h3>Our Story</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6">
-                            <div class="about-content">
-                                <p>Our studio is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each of our clients and their projects; thanks to them we have grown and built what we are today.</p>
-                                <p>Our agency can only be as strong as our people and because of this, our team have run their own businesses, designed game changing products, consulted for companies as well as competed collegiately and professionally when it comes to sports.</p>
-                                
-                            </div>
-                        </div>
-                    </div><!-- .row end -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="about-bio">
+                                        ABHAYA was created in 2020 by a group of masters students who, through their personal work with multiple NGOs,realized that a more inclusive approach to mental health was needed.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="about-content">
+                                        <p>After extensive research and consultation, ABHAYA was born.<br>ABHAYA is based on the premise that when an individual has a problem, they often seek help from their peers.
+                                            Many individuals think their own family can't possibly understand what's happening in their lives and that their friends might laugh or abandon them.
+                                            ABHAYA provides a safe, confidential place to talk things out with another fellow whose been in a similar situation who can understand and will listen, but not judge.
+                                        </p>
+                                        <p>This simple act of listening can make a huge difference, sometimes a life-saving one.These individuals know they can trust ABHAYA - and they do.ABHAYA provides a safe space for such individuals to go ahead and be part of such more organisations and serve with love.</p>
 
-                </div>
-            </div><!-- .col-lg-8 end -->
-            <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="about-img">
-                    <img src="{{ url_for('static', filename = 'images/shortcode/3.png') }}" alt="about image">
-                </div>
+                                    </div>
+                                </div>
+                            </div><!-- .row end -->
 
-            </div><!-- .col-lg-4 end -->
-        </div><!-- .row end -->
-    </div><!-- .container end -->
-</section>
+                        </div>
+                    </div><!-- .col-lg-8 end -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="about-img">
+                            <img src="{{ url_for('static', filename = 'images/shortcode/3.png') }}" alt="about image">
+                        </div>
+
+                    </div><!-- .col-lg-4 end -->
+                </div><!-- .row end -->
+            </div><!-- .container end -->
+        </section>
 
 
 
@@ -603,30 +506,30 @@
 <!-- #clients2 end --><!-- Footer #1
 ============================================= -->
 <footer id="footer" class="footer footer-8">
-	<div class="footer-container">
-	<!-- Info Widget
+            <div class="footer-container">
+                <!-- Info Widget
 	============================================= -->
-	<div class="footer-info-widget">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-6">
-					<div class="contact-info">
-						<p>Email Us : 7oroof@7oroof.com</p>
-						<p>Call Us : 002 01065370701</p>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-6">
-					<div class="copyright-info text-right">
-						<p>&copy; 2018 Celia Studio. All Rights Reserved</p>
-						<p>With Love by <a href="http://themeforest.net/user/7oroof/portfolio?ref=zytheme">7oroof.com</a></p>
-					</div>
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</div><!-- .footer-copyright end -->
-	
-	</div><!-- .footer-container end -->
-</footer>
+                <div class="footer-info-widget">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="contact-info">
+                                    <p>Email Us : AbhayaHelp@gmail.com</p>
+                                    <p>Call Us : 002 01065370701</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="copyright-info text-right">
+                                    <p>&copy; 2020 Abhaya. All Rights Reserved</p>
+                                    <p>With Love by <a href="">Abhaya.com</a></p>
+                                </div>
+                            </div>
+                        </div><!-- .row end -->
+                    </div><!-- .container end -->
+                </div><!-- .footer-copyright end -->
+
+            </div><!-- .footer-container end -->
+        </footer>
  </div><!-- #wrapper end -->
 <!-- Footer Scripts
 ============================================= -->

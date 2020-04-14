@@ -13,7 +13,7 @@
 
 <!-- Fonts
     ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 
 <!-- Stylesheets
     ============================================= -->
@@ -42,7 +42,7 @@
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid container-p0">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo-white.png" alt="celia template">
+                <img src="{{ url_for('static', filename = 'images/logo/Abhaya Logo.png') }}" alt="celia template">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,22 +52,6 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
                      	<!-- Home Menu -->
-						<li class="has-dropdown mega-dropdown active">
-							<a href="#"  class="dropdown-toggle menu-item">home</a>
-							<!-- .mega-dropdown-menu end -->
-						</li>
-						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">how we can help</a>
-							<!-- .mega-dropdown-menu end -->
-						</li>
-						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">Our Story</a>
-							<!-- .mega-dropdown-menu end -->
-						</li>
-						<li class="has-dropdown ">
-							<a href="{{ url_for('donation') }}"  class="dropdown-toggle menu-item">donation</a>
-							<!-- .mega-dropdown-menu end -->
-						</li>
                         <li class="has-dropdown ">
 							<a href="{{ url_for('logout') }}"  class="dropdown-toggle menu-item">logout</a>
 							<!-- .mega-dropdown-menu end -->

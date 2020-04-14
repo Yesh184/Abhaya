@@ -13,7 +13,7 @@
 
 <!-- Fonts
     ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i%7CDroid+Serif:400,400i,700,700i%7CLora:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 
 <!-- Stylesheets
 
@@ -43,7 +43,7 @@
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid container-p0">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo-white.png" alt="celia template">
+                <img src="{{ url_for('static', filename = 'images/logo/Abhaya Logo.png') }}" alt="celia template">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,19 +53,23 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
                      	<!-- Home Menu -->
-						<li class="has-dropdown mega-dropdown active">
-							<a href="#"  class="dropdown-toggle menu-item">home</a>
+						<li class="has-dropdown mega-dropdown ">
+							<a href="{{ url_for('home') }}"  class="dropdown-toggle menu-item">home</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">how we can help</a>
+							<a href="{{ url_for('howwecanhelp') }}"  class="dropdown-toggle menu-item">how we can help</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
-							<a href="#"  class="dropdown-toggle menu-item">Our Story</a>
+							<a href="{{ url_for('watch') }}"  class="dropdown-toggle menu-item">Watch Stories</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
 						<li class="has-dropdown ">
+							<a href="{{ url_for('campaings') }}"  class="dropdown-toggle menu-item">Campaing</a>
+							<!-- .mega-dropdown-menu end -->
+						</li>
+						<li class="has-dropdown active">
 							<a href="{{ url_for('donation') }}"  class="dropdown-toggle menu-item">donation</a>
 							<!-- .mega-dropdown-menu end -->
 						</li>
@@ -95,6 +99,7 @@
 </header>
 <!-- Page Title #1
 ============================================= -->
+<br>
 <section id="contact3" class="contact contact-3 pt-0 pb-0 bg-gray">
     <div class="container-fluid pr-0 pl-0">
         <div class="row">
@@ -146,11 +151,11 @@
     <!-- .container end -->
 </section>
 <!-- #contact1 end -->
-<br>
+
 
 <!-- Footer #1
 ============================================= -->
-<footer id="footer" class="footer footer-8">
+<footer id="footer" class="footer footer-8 bg-white">
 	<div class="footer-container">
 	<!-- Info Widget
 	============================================= -->
@@ -159,14 +164,14 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-6">
 					<div class="contact-info">
-						<p>Email Us : 7oroof@7oroof.com</p>
-						<p>Call Us : 002 01065370701</p>
+						<p>Email Us : abhayaHelp@gmail.com</p>
+                                    <p>Call Us : 002 01065370701</p>
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6">
 					<div class="copyright-info text-right">
-						<p>&copy; 2018 Celia Studio. All Rights Reserved</p>
-						<p>With Love by <a href="http://themeforest.net/user/7oroof/portfolio?ref=zytheme">7oroof.com</a></p>
+						<p>&copy; 2020 Abhaya. All Rights Reserved</p>
+                        <p>With Love by <a href="">abhaya.com</a></p>
 					</div>
 				</div>
 			</div><!-- .row end -->
