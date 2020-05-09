@@ -5,16 +5,7 @@ from firebase_admin import credentials
 from datetime import date
 import pyrebase
 
-# firebaseConfig = {
-#     'apiKey': "AIzaSyCVuv20kGMbMNcv87Sxu0702YpLXRbdxOM",
-#     'authDomain': "abhayafirebase.firebaseapp.com",
-#     'databaseURL': "https://abhayafirebase.firebaseio.com",
-#     'projectId': "abhayafirebase",
-#     'storageBucket': "abhayafirebase.appspot.com",
-#     'messagingSenderId': "323947728412",
-#     'appId': "1:323947728412:web:18cdacc4baec42a6b719d9",
-#     "serviceAccount": "abhaya-a0051-firebase-adminsdk-3ii4g-939db4d8b5.json"
-#    }
+
 
 firebaseConfig = {
     "apiKey": "AIzaSyC0F2DnMwXJtyrxgc-YPNuIIvVsPMemmkM",
@@ -24,13 +15,13 @@ firebaseConfig = {
     "storageBucket": "abhaya-a0051.appspot.com",
     "messagingSenderId": "204507316536",
     "appId": "1:204507316536:web:377a2ae54dcb0aa6e101cd",
-    "serviceAccount": "abhaya-a0051-firebase-adminsdk-3ii4g-939db4d8b5.json"
+    "serviceAccount": "/home/UTSA2020/abhaya/abhaya-a0051-firebase-adminsdk-3ii4g-939db4d8b5.json"
    }
 
 fa = pyrebase.initialize_app(firebaseConfig)
 authe = fa.auth()
 
-cred = credentials.Certificate('abhaya-a0051-firebase-adminsdk-3ii4g-939db4d8b5.json')
+cred = credentials.Certificate('/home/UTSA2020/abhaya/abhaya-a0051-firebase-adminsdk-3ii4g-939db4d8b5.json')
 firebase_admin.initialize_app(cred)
 
 app = Flask(__name__)
@@ -57,7 +48,7 @@ def makedonation():
          'cardno':cardno,
          'date':date,
          'cvv':cvv
-         
+
       }
       try:
          results = db.child("donation").push(data)
@@ -75,7 +66,7 @@ def newsletter():
       }
 
       results = db.child("newsletter").push(data)
-      
+
    return render_template('camps.html')
 
 @app.route('/signup')
@@ -106,7 +97,7 @@ def register():
       password = request.form['contact-pass']
       try:
          user = auth.create_user(email=email,email_verified=False, password=password,display_name=name,disabled=False)
-       
+
       except :
          render_template('signup.html')
    return render_template('login.html')
@@ -118,15 +109,15 @@ def makelogin():
       password = request.form['contact-pass']
       try:
          user = authe.sign_in_with_email_and_password(email,password)
-         session['id'] = user['localId']  
+         session['id'] = user['localId']
       except :
          render_template('login.html')
    return render_template('dashboard.html')
 
 @app.route('/logout')
 def logout():
-   if 'id' in session:  
-        session.pop('id',None)  
+   if 'id' in session:
+        session.pop('id',None)
    return render_template('index.html')
 
 
